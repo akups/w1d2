@@ -1,0 +1,39 @@
+/* type selector */
+/* selects by html tag */
+li {
+  text-align: center;
+  list-style-position: inside;
+}
+
+li {
+  text-align: end;
+}
+
+div {
+  background-color: aqua;
+}
+
+/* class selector */
+/* can select multiple elements */
+.text-container {
+  color: white;
+}
+
+.another-class {
+  border: 1px solid white;
+}
+
+/* id selector */
+/* will select only one element */
+#mate-item {
+  text-decoration: line-through greenyellow;
+  text-align: center;
+}
+
+table {
+  /* background-color: rgb(170, 100, 15); */
+  /* background-color: rgba(170, 100, 15, 0.2); */
+  /* background-color: rgb(76, 187, 23); */
+  /* background-color: #fff; */
+  background-color: #4cbb17;
+}
