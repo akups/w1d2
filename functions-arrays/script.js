@@ -12,8 +12,6 @@ function greetAlf() {
 
 greetAlf();
 
-console.clear();
-
 function greet(personName) {
   return "Hello " + personName + "!";
   console.log("the greet function is called");
@@ -65,3 +63,85 @@ const divide = (a, b) => {
 };
 
 divide(4, 2);
+
+const bootcamps = ["WebDev", "UX/UI", "Data"];
+
+const cities = ["Berlin", "Madrid", "Barcelona", "Amsterdam"];
+
+let studentsCountries = [];
+studentsCountries = ["Greece", "Ghana", "Japan", "Finland"];
+
+console.log(studentsCountries[0]);
+console.log(studentsCountries[2]);
+console.log(studentsCountries[studentsCountries.length - 1]);
+
+// strings are immutable
+let city = "berlin";
+city[0] = "B";
+// console.log(city); // "berlin"
+
+// arrays are mutable
+studentsCountries[0] = "Germany";
+studentsCountries[1] = "Syria";
+
+// All the following methods mutate the array in place
+
+// mutate the array by appending elements to it
+studentsCountries.push("Ghana");
+
+// mutate the array by prepending elements
+studentsCountries.unshift("Greece");
+
+// mutate the array by inserting elements at a specific position
+studentsCountries.splice(2, 0, "USA");
+// and potentially removes elements
+studentsCountries.splice(4, 1, "Turkey");
+
+// mutate the array by removing elements starting from a given position
+studentsCountries.splice(5, 2);
+
+// mutate the array by removing the first element
+studentsCountries.shift();
+
+// mutate the array by removing the last element
+studentsCountries.pop();
+
+studentsCountries.push("Turkey", "Japan", "Ghana", "Finland");
+
+console.log(studentsCountries);
+
+for (let i = 0; i < studentsCountries.length; i += 1) {
+  //   console.log(i);
+  console.log(studentsCountries[i].toUpperCase());
+}
+
+studentsCountries.forEach(function(country, index) {
+  // body of the function
+  console.log(country, index);
+});
+
+// function callback(a, b) {
+//   console.log(a, b);
+// }
+// studentsCountries.forEach(callback);
+
+console.clear();
+
+for (country of studentsCountries) {
+  console.log(country);
+}
+
+// Transform a string into an array
+Array.from("Hello World!");
+"Hello World!".split("");
+// ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d", "!"]
+
+// Join an array into a string
+["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d", "!"].join("");
+// "Hello World!"
+
+"Hello World!"
+  .split("")
+  .reverse()
+  .join("");
+// "!dlroW olleH"
